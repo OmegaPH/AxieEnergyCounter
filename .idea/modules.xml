@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AxieCounter.iml" filepath="$PROJECT_DIR$/AxieCounter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AxieCounterGCS.iml" filepath="$PROJECT_DIR$/AxieCounterGCS.iml" />
     </modules>
   </component>
 </project>
