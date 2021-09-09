@@ -86,7 +86,7 @@ public class Main extends Applet implements Runnable {
         g2.setColor(getForeground());
         paint(g2);
         g.drawImage(i, 0, 0, null);
-        paint(g);
+        paint(g2);
     }
 
     public void run () {
