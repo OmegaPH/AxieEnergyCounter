@@ -6,19 +6,22 @@ import java.applet.Applet;
 import java.awt.*;
 
 import main.screens.counting;
+import main.screens.donation;
 import main.system.numbers;
 
 public class Main extends Applet implements Runnable {
-    static final int WIDTH = 500, HEIGHT = 650;
+    static int WIDTH = 500, HEIGHT = 650;
     private Image i;
     private Graphics g2;
     Thread thread;
     counting counting;
     numbers numbers;
+    donation donation;
 
     public enum STATE {
         MENU,
-        START
+        START,
+        DONATION
     }
 
     public static STATE State = STATE.MENU;
@@ -26,7 +29,7 @@ public class Main extends Applet implements Runnable {
     public static void main(String[] args) {
         // create and set up the applet
         Main applet = new Main();
-        applet.setPreferredSize(new Dimension(500, 650));
+        applet.setPreferredSize(new Dimension(WIDTH, HEIGHT));
         applet.init();
 
         // create a frame to host the applet, which is just another type of Swing Component
@@ -43,6 +46,7 @@ public class Main extends Applet implements Runnable {
     }
 
     public void init () {
+        donation = new donation();
         numbers = new numbers();
         counting = new counting();
         this.resize(WIDTH, HEIGHT);
@@ -70,6 +74,9 @@ public class Main extends Applet implements Runnable {
                 g.fillRect(0, 0, WIDTH, HEIGHT);
                 counting.paint(g);
                 numbers.draw(g);
+        } else if (State == STATE.DONATION) {
+            g.setColor(Color.BLUE);
+            donation.paint(g);
         }
     }
 
@@ -91,7 +98,6 @@ public class Main extends Applet implements Runnable {
 
     public void run () {
         for (; ; ) {
-
             repaint();
 
             try {

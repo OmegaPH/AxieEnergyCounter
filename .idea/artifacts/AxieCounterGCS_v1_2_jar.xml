@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="AxieCounterGCS_2.jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/AxieCounterGCS_2_jar</output-path>
+  <artifact type="jar" name="AxieCounterGCS_v1.2.jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AxieCounterGCS_v1_2_jar</output-path>
     <root id="archive" name="AxieCounter.jar">
       <element id="module-output" name="AxieCounterGCS" />
       <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib.jar" path-in-jar="/" />
